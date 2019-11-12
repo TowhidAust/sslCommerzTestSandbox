@@ -15,13 +15,9 @@
 
     <div class="sslDiv">
         <h3 class="text-center">Our first ssl commerz</h3>
-        <div class="button_">
+        <div class="button_" id="ajaxButton">
             <!-- <button class="btn btn-primary">Payment</button> -->
-            <button class="your-button-class" id="sslczPayBtn"
-                token="if you have any token validation"
-                postdata="your javascript arrays or objects which requires in backend"
-                order="If you already have the transaction generated for current order"
-                endpoint="An URL where backend code will initiate the payment to SSLCommerz"> Pay Now
+            <button class="your-button-class" id="ajaxButton" type="button"> Pay Now
             </button>
         </div>
     </div>
@@ -30,8 +26,9 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
@@ -41,7 +38,7 @@
     </script>
 
 
-    <script>
+    <!-- <script>
         (function (window, document) {
         var loader = function () {
             var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
@@ -51,7 +48,26 @@
 
         window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
         })(window, document);
-    </script>
+    </script> -->
+        <script>
+            // $('button').click(function(){
+            //     $.ajax({
+            //     type: "POST",
+            //     url: '/api/ssl_Parameters',
+            //     // data: data,
+            //     // success: success,
+            //     dataType: 'json'
+            // });
+            // })
+           
+            $("button").click(function(){
+                $.post("/api/ssl_Parameters",
+                function(data, status){
+                    console.log(data);
+                    // console.log(status);
+                });
+            });
+        </script>
 </body>
 
 </html>
