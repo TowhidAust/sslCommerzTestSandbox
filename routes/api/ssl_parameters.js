@@ -42,8 +42,6 @@ let promise = new SSLCommerzPayment({
 }, false);
 
 
-
-const sslParams = [];
 // create a member
 router.post('/', (req, res) => {
     promise.then((value) => {

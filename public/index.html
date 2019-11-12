@@ -17,8 +17,13 @@
         <h3 class="text-center">Our first ssl commerz</h3>
         <div class="button_" id="ajaxButton">
             <!-- <button class="btn btn-primary">Payment</button> -->
-            <button class="your-button-class" id="ajaxButton" type="button"> Pay Now
-            </button>
+            <!-- <button class="your-button-class" id="sslczPayBtn"
+                    token="if you have any token validation"
+                    postdata="your javascript arrays or objects which requires in backend"
+                    order="If you already have the transaction generated for current order"
+                    endpoint="/api/ssl_Parameters"> Pay Now
+            </button> -->
+            <button class="btn btn-primary">Pay now</button>
         </div>
     </div>
 
@@ -37,8 +42,8 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 
-
-    <!-- <script>
+<!-- 
+    <script>
         (function (window, document) {
         var loader = function () {
             var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
@@ -50,16 +55,6 @@
         })(window, document);
     </script> -->
         <script>
-            // $('button').click(function(){
-            //     $.ajax({
-            //     type: "POST",
-            //     url: '/api/ssl_Parameters',
-            //     // data: data,
-            //     // success: success,
-            //     dataType: 'json'
-            // });
-            // })
-           
             $("button").click(function(){
                 $.post("/api/ssl_Parameters",
                 function(data, status){
