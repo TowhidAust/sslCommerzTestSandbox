@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Success Page</title>
+    <title>Success</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -13,25 +13,7 @@
 
 <body>
 
-    <div class="sslDiv">
-        <h3 class="text-center">My Success Page</h3>
-        <div class="button_ buttonContainer mt-5">
-            <!-- <button class="btn btn-primary">Payment</button> -->
-            <!-- <button class="your-button-class" id="sslczPayBtn"
-                    token="if you have any token validation"
-                    postdata="your javascript arrays or objects which requires in backend"
-                    order="If you already have the transaction generated for current order"
-                    endpoint="/api/ssl_Parameters"> Pay Now
-            </button> -->
-         
-             
-                <!-- <input class="form-control customerName" type="text" name="name" placeholder="Enter Your Name">
-                <input class="form-control amount" type="number" placeholder="Enter Your Amount">
-                <button class="btn btn-primary" type="submit">Pay now</button> -->
-            
-            
-        </div>
-    </div>
+    <h3>I am success</h3>
 
 
 
@@ -50,14 +32,14 @@
 
 
         <script>
-           
-            $.post(`/api/ssl_Parameters`,
-            function(data, status){
+            console.log('i am success');
+            $.post(`/api/success`,
+            function(data, status,){
                 console.log(data);
-                // console.log(status);
-                // location.replace(`${data.redirectGatewayURL}`);
+                console.log(status);
+                
+                // window.location = 'localhost:5000/success.html'
             });
-     
         </script>
 </body>
 

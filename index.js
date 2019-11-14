@@ -32,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // members api route
 app.use('/api/members', require('./routes/api/members'));
 app.use('/api/ssl_Parameters', require('./routes/api/ssl_parameters'));
+app.use('/api/success', require('./routes/api/ipn_listerners'));
 
 
 const PORT = process.env.PORT || 5000;

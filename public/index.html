@@ -54,7 +54,7 @@
             $("button").click(function(){
                 let amount = $('.amount').val();
                 let customerName = $('.customerName').val();
-                console.log('amount is ---', amount);
+                console.log('amount is ---', amount,customerName);
                 $.post(`/api/ssl_Parameters`, {
                     customerName: customerName,
                     amount: amount
@@ -62,7 +62,7 @@
                 
                 function(data, status){
                     console.log(data);
-                    // console.log(status);
+                    console.log(status);
                     location.replace(`${data.redirectGatewayURL}`);
                 });
             });

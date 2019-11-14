@@ -14,7 +14,7 @@ const router = express.Router();
 // });
 // create a member
 router.post('/', (req, res) => {
-    console.log(req.headers);
+    // console.log(req.headers);
     let customerName = req.body.customerName;
     let amount = req.body.amount;
     console.log(req.body.amount);
@@ -24,9 +24,9 @@ router.post('/', (req, res) => {
         total_amount: amount,
         currency: 'BDT',
         tran_id: 'REF123',
-        success_url: 'http://localhost:5000/success.html',
-        fail_url: 'http://localhost:5000/fail.html',
-        cancel_url: 'http://localhost:5000/cancel.html',
+        success_url: 'http://localhost:5000/api/success',
+        fail_url: 'http://localhost:5000/api/fail.html',
+        cancel_url: 'http://localhost:5000/api/cancel.html',
         shipping_method:'Courier',
         product_name:'Computer.',
         product_category:'Electronic',
@@ -55,16 +55,18 @@ router.post('/', (req, res) => {
         value_d: 'ref004_D'
     }, false);
     promise.then((value) => {
-        // console.log(value);
         res.json(value);
     });
 });
 
+// router.post('/success', (req, res) => {
+//     console.log(object);
+//     let json = {
+//         name: 'Towhid',
+//         email: 'towhid@gmail.com'
+//     }
+//     res.json(json);
+// });
 
-
-router.post('/', (req, res) => {
-
- 
-});
 
 module.exports = router;
