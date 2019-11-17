@@ -132,6 +132,6 @@ app.post('/api/success', (req, res) => {
     // res.send(`<h1> valid: ${val_id} -- storeid: ${store_id} </h1>`);
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => console.log(`Server Started on port ${PORT}`));
